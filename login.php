@@ -73,7 +73,7 @@ if (isset($_POST['login'])) {
             <div class="divider">or</div>
 
             <p class="google">Sign in with Google</p>
-            <p class="SignUp">Are you new? <a href=#>Create an Account</a></p>
+            <p class="SignUp">Are you new? <a href="register.php">Create an Account</a></p>
         </form>
     </div>
     

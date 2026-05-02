@@ -14,7 +14,7 @@ include 'config.php';
 <div class="navbar">
     <h2>Lampung Trip</h2>
     <div>
-        <a href="index.php">Beranda</a>
+        <a href="user.php">Beranda</a>
         <a class="active" href="destinasi.php">Destinasi</a>
         <a href="open_trip.php">Open Trip</a>
     </div>

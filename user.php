@@ -73,7 +73,7 @@
         <h2>Berita Wisata</h2>
 
         <div class="berita-container">
-            <div class="berita card">
+            <div class="berita-card">
                 <img src="img/festival-krakatau.avif">
                 <div class="berita-content">
                     <h3>Festival Krakatau</h3>
@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="berita card">
+            <div class="berita-card">
                 <img src="img/seruit.jpg">
                 <div class="berita-content">
                     <h3>Wisata Kuliner Lampung Makin Digemari</h3>
