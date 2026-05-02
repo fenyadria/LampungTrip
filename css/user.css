@@ -1,0 +1,41 @@
+.wrapper {
+    position: relative;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    min-width: 280px;
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 40%;
+    background: white;
+    border: none;
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: -15px;
+}
+
+.next {
+    right: -15px;
+}

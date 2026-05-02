@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
     }
 
     else if (
-        isset($_POST['user_email']) &&
+        isset($_SESSION['user_email']) &&
         $email == $_SESSION['user_email'] &&
         $password == $_SESSION['user_password']
     ) {
@@ -38,7 +38,9 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="login.css">
+
 </head>
 <body>
 
