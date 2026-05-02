@@ -1,32 +1,29 @@
 <?php
 session_start();
+include "config.php";
 
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if ($email === 'admin@gmail.com' && $password === '123456') {
+    $query = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($conn, $query);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user && password_verify($password, $user['password'])) {
         $_SESSION['login'] = true;
-        $_SESSION['role'] = 'admin';
+        $_SESSION['role'] = $user['role'];
 
-        header('Location: admin.php');
-        exit;
-    }
-
-    else if (
-        isset($_SESSION['user_email']) &&
-        $email == $_SESSION['user_email'] &&
-        $password == $_SESSION['user_password']
-    ) {
-        $_SESSION['login'] = true;
-        $_SESSION['role'] = 'user';
-
-        header('Location: user.php');
+        if ($user['role'] == 'admin') {
+            header('Location: admin.php');
+        } else {
+            header('Location: user.php');
+        }
         exit;
     }
 
     else {
-        echo "Invalid email or password.";
+        $error = "Invalid email or password.";
     }
 }
 ?>
