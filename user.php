@@ -25,7 +25,7 @@
             <p>Temukan destinasi wisata terbaik, budaya, kuliner dan open trip menarik di Lampung</p>
 
             <div class="search-box">
-                <input type="text" placeholder="Cari destinasi wisata">
+                <input type="text" id="searchInput" placeholder="Cari destinasi wisata">
             </div>
         </div>
     </section>
